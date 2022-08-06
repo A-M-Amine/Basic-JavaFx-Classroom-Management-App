@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.tp6Controller">
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="800.0" style="-fx-background-color: #416b5f;" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_CIRCLE_LEFT" layoutX="14.0" layoutY="27.0" size="20" />
+            <Button layoutX="7.0" layoutY="7.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: transparent;" text="oo" textFill="TRANSPARENT" />
+            <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_CIRCLE_RIGHT" layoutX="768.0" layoutY="27.0" size="20" />
+            <Button layoutX="761.0" layoutY="7.0" mnemonicParsing="false" onAction="#next" style="-fx-background-color: transparent;" text="oo" textFill="TRANSPARENT" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="460.0" prefWidth="800.0" style="-fx-background-color: #bfd0da;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tab_tp6" layoutX="163.0" layoutY="190.0" prefHeight="230.0" prefWidth="450.0">
+              <columns>
+                <TableColumn fx:id="c1" prefWidth="108.0" text="C1" />
+                <TableColumn fx:id="c2" prefWidth="113.0" text="C2" />
+                  <TableColumn fx:id="c3" prefWidth="109.0" text="C3" />
+                  <TableColumn fx:id="c4" prefWidth="119.0" text="C4" />
+              </columns>
+            </TableView>
+            <VBox layoutX="14.0" layoutY="18.0" prefHeight="155.0" prefWidth="748.0" spacing="23.0">
+               <children>
+                  <RadioButton fx:id="t_1" mnemonicParsing="false" onAction="#tache_1" text="Les noms et prénoms des étudiants ayant obtenus des notes d'examens égales à 20.">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tache" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="t_2" mnemonicParsing="false" onAction="#tache_2" text="Les noms et prénoms des étudiants qui ne sont pas inscrits dans l'unité « POO »." toggleGroup="$tache" />
+                  <RadioButton fx:id="t_3" mnemonicParsing="false" onAction="#tache_3" text="Les libellés des unités d'enseignement dont aucun étudiant n'est inscrit." toggleGroup="$tache" />
+                  <RadioButton fx:id="t_4" mnemonicParsing="false" onAction="#tache_4" text="Nom, prénom, moyenne par unité d'enseignement et le libellé de l'unité d'un étudiant. " toggleGroup="$tache" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

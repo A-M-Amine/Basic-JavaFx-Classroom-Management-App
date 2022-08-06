@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.frameENSController">
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="700.0" style="-fx-background-color: #416b5f;" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="POWER_OFF" layoutX="14.0" layoutY="27.0" size="20" />
+            <Button layoutX="4.0" layoutY="7.0" mnemonicParsing="false" onAction="#changeScreen" style="-fx-background-color: transparent;" text="ooo" textFill="TRANSPARENT" />
+            <Label layoutX="599.0" layoutY="14.0" style="-fx-background-color: #bfd0da;" text="  Enseignant    " />
+            <Text layoutX="563.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER" />
+         </children></AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="455.0" prefWidth="700.0" style="-fx-background-color: #bfd0da;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table_ens" layoutX="81.0" layoutY="170.0" prefHeight="260.0" prefWidth="520.0">
+              <columns>
+                <TableColumn fx:id="matens" prefWidth="173.0" text="Matricule" />
+                <TableColumn fx:id="nomens" prefWidth="173.0" text="Nom" />
+                  <TableColumn fx:id="prenomens" prefWidth="178.0" text="Prénom" />
+              </columns>
+            </TableView>
+            <Text fill="#416b5f" layoutX="21.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Nouveau Tuple">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="Mat" layoutX="151.0" layoutY="14.0" prefHeight="25.0" prefWidth="114.0" promptText="Matricule" />
+            <TextField fx:id="nm" layoutX="301.0" layoutY="14.0" prefHeight="25.0" prefWidth="114.0" promptText="Nom" />
+            <TextField fx:id="pm" layoutX="449.0" layoutY="14.0" prefHeight="25.0" prefWidth="114.0" promptText="Prénom" />
+            <Button layoutX="606.0" layoutY="14.0" mnemonicParsing="false" onAction="#insererdata" style="-fx-background-color: #416b5f;" text="Insérer" textFill="WHITE" />
+            <Text fill="#416b5f" layoutX="264.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Introduisez votre matricule">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="matens_saisie" layoutX="266.0" layoutY="93.0" style="-fx-background-color: transparent; -fx-border-color: #416b5f; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button layoutX="324.0" layoutY="133.0" mnemonicParsing="false" onAction="#loadData" style="-fx-background-color: #416b5f;" text="OK" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

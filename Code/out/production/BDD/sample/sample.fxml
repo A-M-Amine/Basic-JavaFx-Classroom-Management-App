@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="700.0">
+         <left>
+            <AnchorPane fx:id="leftanc" prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #416b5f;" BorderPane.alignment="CENTER">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" layoutX="143.0" layoutY="201.0" size="75" />
+                  <Text fill="WHITE" layoutX="79.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Des Étudiants">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children></AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="500.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="user_name" layoutX="101.0" layoutY="223.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: #416b5f; -fx-border-width: 0px 0px 2px 0px;" />
+                  <PasswordField fx:id="passwordF" layoutX="101.0" layoutY="273.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #416b5f; -fx-border-width: 0px 0px 2px 0px;" />
+                  <FontAwesomeIconView fill="#416b5f" glyphName="USER" layoutX="74.0" layoutY="243.0" size="20.0" />
+                  <FontAwesomeIconView fill="#416b5f" glyphName="LOCK" layoutX="77.0" layoutY="295.0" size="20" />
+                  <Button fx:id="login_button" layoutX="135.0" layoutY="347.0" mnemonicParsing="false" onAction="#loginButtonClick" prefHeight="34.0" prefWidth="80.0" style="-fx-background-color: #416b5f;" text="Login" textFill="WHITE" />
+                  <FontAwesomeIconView fill="#416b5f" glyphName="USERS" layoutX="156.0" layoutY="116.0" size="35" />
+                  <Text fill="#416b5f" layoutX="130.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BDD Login" wrappingWidth="90.404296875">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="errormsg" layoutX="70.0" layoutY="314.0" prefHeight="17.0" prefWidth="212.0" textFill="RED" />
+               </children></AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</GridPane>

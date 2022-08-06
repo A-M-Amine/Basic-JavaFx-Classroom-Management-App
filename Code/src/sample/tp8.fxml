@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.tp8Controller">
+    <top>
+        <AnchorPane prefHeight="45.0" prefWidth="800.0" style="-fx-background-color: #416b5f;" BorderPane.alignment="CENTER">
+            <children>
+                <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_CIRCLE_LEFT" layoutX="14.0" layoutY="27.0" size="20" />
+                <Button layoutX="7.0" layoutY="7.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: transparent;" text="oo" textFill="TRANSPARENT" />
+            </children>
+        </AnchorPane>
+    </top>
+    <bottom>
+        <AnchorPane prefHeight="460.0" prefWidth="800.0" style="-fx-background-color: #bfd0da;" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tab_tp8" layoutX="138.0" layoutY="211.0" prefHeight="230.0" prefWidth="500.0">
+                    <columns>
+                        <TableColumn fx:id="c1" prefWidth="159.0" text="C1" />
+                        <TableColumn fx:id="c2" prefWidth="181.0" text="C2" />
+                        <TableColumn fx:id="c3" prefWidth="159.0" text="C3" />
+                    </columns>
+                </TableView>
+                <VBox layoutX="14.0" layoutY="14.0" prefHeight="174.0" prefWidth="748.0" spacing="23.0">
+                    <children>
+                        <RadioButton fx:id="t_1" mnemonicParsing="false" onAction="#tache_1" text="Afficher pour chaque étudiant son matricule et sa moyenne générale.">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="tache" />
+                            </toggleGroup></RadioButton>
+                        <RadioButton fx:id="t_2" mnemonicParsing="false" onAction="#tache_2" text="Afficher pour chaque unité son libellé et la moyenne de la section." toggleGroup="$tache" />
+                        <RadioButton fx:id="t_3" mnemonicParsing="false" onAction="#tache_3" text="Afficher la moyenne générale de la section." toggleGroup="$tache" />
+                        <RadioButton fx:id="t_4" mnemonicParsing="false" onAction="#tache_4" text="Afficher, pour chaque libellé d'unité d'enseignement, la plus haute et la pluss basse moyenne." toggleGroup="$tache" />
+                  <RadioButton fx:id="t_5" mnemonicParsing="false" onAction="#tache_5" text="Afficher, les informations des étudiants ayant une moyenne générale supérieure ou égale à la moyenne générale de la section." toggleGroup="$tache" />
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>

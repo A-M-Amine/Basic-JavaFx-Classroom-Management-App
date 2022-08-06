@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.frameBDDController">
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #416b5f;" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="POWER_OFF" layoutX="14.0" layoutY="27.0" size="20" />
+            <Button layoutX="4.0" layoutY="7.0" mnemonicParsing="false" onAction="#changeScreen" style="-fx-background-color: transparent;" text="ooo" textFill="TRANSPARENT" />
+            <Label layoutX="706.0" layoutY="14.0" prefHeight="17.0" prefWidth="80.0" style="-fx-background-color: #bfd0da;" text="      ADMIN" />
+            <Text layoutX="668.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER" />
+            <ComboBox fx:id="choiceB" layoutX="49.0" layoutY="7.0" onAction="#changerScene" prefWidth="150.0" style="-fx-background-color: #bfd0da;" />
+            <FontAwesomeIconView fill="#416b5f" glyphName="TABLE" layoutX="163.0" layoutY="25.0" size="15" />
+            <Button layoutX="219.0" layoutY="7.0" mnemonicParsing="false" onAction="#versRequetes" style="-fx-background-color: #bfd0da;" text="Requetes" textFill="#416b5f" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="455.0" prefWidth="700.0" style="-fx-background-color: #bfd0da;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="357.0" layoutY="101.0" mnemonicParsing="false" onAction="#inserer" style="-fx-background-color: #416b5f;" text="Insérer" textFill="WHITE" />
+            <TableView fx:id="tabG" layoutX="51.0" layoutY="151.0" prefHeight="280.0" prefWidth="700.0">
+              <columns>
+                <TableColumn fx:id="c1" prefWidth="146.0" text="C1" />
+                <TableColumn fx:id="c2" prefWidth="140.0" text="C2" />
+                  <TableColumn fx:id="c3" prefWidth="135.0" text="C3" />
+                  <TableColumn fx:id="c4" prefWidth="118.0" text="C4" />
+                  <TableColumn fx:id="c5" prefWidth="160.0" text="C5" />
+              </columns>
+            </TableView>
+            <TextField fx:id="tf_5" layoutX="431.0" layoutY="65.0" />
+            <TextField fx:id="tf_4" layoutX="186.0" layoutY="65.0" />
+            <HBox layoutX="73.0" layoutY="32.0" prefHeight="33.0" prefWidth="620.0" spacing="85.0">
+               <children>
+                  <TextField fx:id="tf_1" />
+                  <TextField fx:id="tf_2" />
+                  <TextField fx:id="tf_3" />
+               </children>
+            </HBox>
+            <Text fill="#416b5f" layoutX="339.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nouveau Tuple">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TableBD_Controller">
+   <right>
+      <AnchorPane prefHeight="455.0" prefWidth="700.0" style="-fx-background-color: #bfd0da;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table_etu" layoutX="55.0" layoutY="160.0" prefHeight="260.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="matetu" prefWidth="150.0" text="Matricule" />
+                <TableColumn fx:id="nometu" prefWidth="102.0" text="Nom" />
+                  <TableColumn fx:id="prenometu" prefWidth="127.0" text="Prénom" />
+                  <TableColumn fx:id="datenaiss" prefWidth="140.0" text="Date Naissance" />
+                  <TableColumn fx:id="adresse" text="Adresse" />
+              </columns>
+            </TableView>
+            <TextField fx:id="mat_saisie" layoutX="263.0" layoutY="73.0" style="-fx-background-color: transparent; -fx-border-color: #416b5f; -fx-border-width: 0px 0px 2px 0px;" />
+            <Text fill="#416b5f" layoutX="261.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Introduisez votre matricule">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Text>
+            <Button fx:id="loadButton" layoutX="321.0" layoutY="120.0" mnemonicParsing="false" onAction="#loaddata" style="-fx-background-color: #416b5f;" text="OK" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </right>
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="700.0" style="-fx-background-color: #416b5f;" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="POWER_OFF" layoutX="14.0" layoutY="27.0" size="20" />
+            <Button fx:id="diconnectButton" layoutX="4.0" layoutY="7.0" mnemonicParsing="false" onAction="#changeScreen" style="-fx-background-color: transparent;" text="ooo" textFill="TRANSPARENT" />
+            <Text layoutX="563.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER" />
+            <Label layoutX="599.0" layoutY="14.0" prefHeight="17.0" prefWidth="80.0" style="-fx-background-color: #bfd0da;" text="     Etudiant" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
